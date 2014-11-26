@@ -28,3 +28,16 @@ source $VIMRUNTIME/mswin.vim
 
 " undo ファイルをまとめる。
 :set undodir=D:\Apps\vim74-kaoriya-win64/undo
+
+" backup ファイルをまとめる。
+:set backupdir=D:\Apps\vim74-kaoriya-win64/backup
+
+" swap ファイルをまとめる。
+:set directory=D:\Apps\vim74-kaoriya-win64/swap
+
+imap <C-j> <C-[>
+imap <C-k> <C-m>
+imap { {}<LEFT>
+imap [ []<LEFT>
+imap ( ()<LEFT>
+
