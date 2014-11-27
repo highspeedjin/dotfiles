@@ -1,14 +1,14 @@
 scriptencoding utf-8
 
-set showtabline=2               " タフ?を常に表示
+set showtabline=2               " タブを常に表示
 colorscheme hybrid              " カラースキーマ
 syntax on
-set number                      " 行番号表示
-set antialias                   " アンチエイリアス
-set guifont=VL_Gothic:h10       " 半角文字の設定
-set guifontwide=VL_Gothic:h10   " 全角文字の設定
+
 set columns=150                 " 横幅
 set lines=40                    " 行数
+
+set guifont=VL_Gothic:h10       " 半角文字の設定
+set guifontwide=VL_Gothic:h10   " 全角文字の設定
 
 "入力モード時、ステータスラインのカラーを変更
 augroup InsertHook
@@ -16,28 +16,4 @@ autocmd!
 autocmd InsertEnter * highlight StatusLine guifg=#ccdc90 guibg=#2E4340
 autocmd InsertLeave * highlight StatusLine guifg=#2E4340 guibg=#ccdc90
 augroup END
-
-" ビジュアルモードで選択したテキストが、クリップボードに入るようにする。
-:set guioptions+=a
-
-" 無名レジスタに入るデータを、*レジスタにも入れる。
-:set clipboard+=unnamed
-
-" 標準的なMS-WindowsのCTRL-X、CTRL-CおよびCTRL-Vを使う。
-source $VIMRUNTIME/mswin.vim
-
-" undo ファイルをまとめる。
-:set undodir=D:\Apps\vim74-kaoriya-win64/undo
-
-" backup ファイルをまとめる。
-:set backupdir=D:\Apps\vim74-kaoriya-win64/backup
-
-" swap ファイルをまとめる。
-:set directory=D:\Apps\vim74-kaoriya-win64/swap
-
-imap <C-j> <C-[>
-imap <C-k> <C-m>
-imap { {}<LEFT>
-imap [ []<LEFT>
-imap ( ()<LEFT>
 
